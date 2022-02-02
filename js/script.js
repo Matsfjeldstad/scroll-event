@@ -1,19 +1,13 @@
 const nav = document.querySelector("nav");
 
 function handleScroll() {
-    console.log(window.scrollY);
+  let scrollVal = window.scrollY;
 
-    const scrolledY = window.scrollY;
-
-    if (scrolledY > 50) {
-        document.body.classList.add("scrolled");
-        nav.classList.add("scrolled");
-    } else {
-        document.body.classList.remove("scrolled");
-        nav.classList.remove("scrolled");
-    }
+  if (scrollVal > 50) {
+    nav.classList.add("scrolled");
+  } else {
+    nav.classList.remove("scrolled");
+  }
 }
-
-// window.onscroll = handleScroll;
 
 window.addEventListener("scroll", handleScroll);
